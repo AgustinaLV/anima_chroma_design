@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contacto - Diseño que se siente</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec5b13",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Instrument Serif", "serif"],
+                        "sans": ["Outfit", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Instrument Serif', serif;
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark .glass {
+            background: rgba(34, 22, 16, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass transition-all duration-300">
+        <div class="px-6 md:px-12 py-4 flex justify-between items-center">
+            <a class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight uppercase hover:text-primary transition-colors"
+                href="portfolio.html">
+                Anima Chroma<span class="text-primary">.</span>
+            </a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase"
+                    href="portfolio.html#proyectos">Proyectos</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase"
+                    href="portfolio.html#filosofia">Filosofía</a>
+                <a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase"
+                    href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-32 pb-20 px-6 md:px-12 flex items-center justify-center relative overflow-hidden">
+        <!-- Background aesthetic elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-orange-500/10 rounded-full blur-3xl -z-10">
+        </div>
+
+        <div
+            class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 glass rounded-3xl p-8 md:p-12 shadow-2xl relative z-10">
+            <!-- Left Info -->
+            <div class="space-y-8 flex flex-col justify-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-display leading-tight mb-4">Hablemos sobre <span
+                            class="text-primary italic">tu próximo proyecto</span></h1>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg">Estamos listos para transformar tus ideas en
+                        una experiencia digital excepcional.</p>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Email</p>
+                            <a href="mailto:hola@estudio.com"
+                                class="font-medium hover:text-primary transition-colors">aglv.disinteriores@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 group">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Ubicación</p>
+                            <p class="font-medium">Mendoza,Argentina</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form class="space-y-6 flex flex-col justify-center">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nombre
+                        completo</label>
+                    <input type="text" id="name"
+                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                        placeholder="Ej. Jane Doe">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Correo
+                        electrónico</label>
+                    <input type="email" id="email"
+                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+                        placeholder="hola@ejemplo.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Tu
+                        mensaje</label>
+                    <textarea id="message" rows="4"
+                        class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
+                        placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                </div>
+                <button type="button"
+                    class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-4 rounded-xl transition-all transform hover:-translate-y-1 shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                    Enviar mensaje <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
