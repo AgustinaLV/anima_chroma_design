@@ -25,7 +25,7 @@ Portfolio web de diseño de interiores — interiorismo brutalista y atmósferas
 ```
 anima-chroma/
 │
-├── portfolio.html       → Página principal (hero, proyectos, filosofía, CTA)
+├── index.html           → Página principal (hero, proyectos, filosofía, CTA)
 ├── contacto.html        → Página de contacto con formulario
 └── README.md
 ```
@@ -65,7 +65,7 @@ git clone https://github.com/tu-usuario/anima-chroma.git
 cd anima-chroma
 
 # 3. Abrir en el navegador
-start portfolio.html
+start index.html
 ```
 
 > **Tip:** También podés usar la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) en VS Code para desarrollo con recarga automática.
@@ -85,7 +85,7 @@ Para publicar el sitio online:
 En unos minutos tu sitio estará disponible en:
 
 ```
-https://tu-usuario.github.io/anima-chroma/portfolio.html
+https://tu-usuario.github.io/anima-chroma/index.html
 ```
 
 ---
